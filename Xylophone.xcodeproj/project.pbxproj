@@ -77,6 +77,14 @@
 				1F6F8B8D27A129370070F274 /* Assets.xcassets */,
 				1F6F8B8F27A129370070F274 /* LaunchScreen.storyboard */,
 				1F6F8B9227A129370070F274 /* Info.plist */,
+				1F6F8BA627A151800070F274 /* Sounds */,
+			);
+			path = Xylophone;
+			sourceTree = "<group>";
+		};
+		1F6F8BA627A151800070F274 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
 				1F6F8B9927A14FCA0070F274 /* A.wav */,
 				1F6F8B9E27A14FCA0070F274 /* B.wav */,
 				1F6F8B9D27A14FCA0070F274 /* C.wav */,
@@ -85,7 +93,7 @@
 				1F6F8B9B27A14FCA0070F274 /* F.wav */,
 				1F6F8B9A27A14FCA0070F274 /* G.wav */,
 			);
-			path = Xylophone;
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

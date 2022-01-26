@@ -6,11 +6,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
   private var buttons: [UIButton] = []
 
+  var player: AVAudioPlayer!
+
+  func playSound(_ title: String) {
+      guard let url = Bundle.main.url(forResource: title, withExtension: "wav") else { return }
+    player = try! AVAudioPlayer(contentsOf: url)
+    player.play()
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
@@ -45,16 +53,14 @@ class ViewController: UIViewController {
       button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
       button.backgroundColor = colors[i]
       button.setTitle(labels[i], for: .normal)
-      button.addTarget(self, action: #selector(handle), for: .touchUpInside)
+      button.addTarget(self, action: #selector(keyPressed), for: .touchUpInside)
       buttons.append(button)
       view.addSubview(button)
     }
   }
 
-  @objc func handle(_ sender: UIButton) {
-    if let title = sender.currentTitle {
-      print(title)
-    }
+  @objc func keyPressed(_ sender: UIButton) {
+    if let title = sender.currentTitle { playSound(title)}
   }
 }
 
