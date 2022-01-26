@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupUI()
+  }
+  func setupUI() {
     view.backgroundColor = .white
     setupKeys()
     let stack = UIStackView(arrangedSubviews: buttons)
