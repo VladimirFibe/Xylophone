@@ -27,21 +27,21 @@ class ViewController: UIViewController {
     view.backgroundColor = .white
     setupKeys()
     let stack = UIStackView(arrangedSubviews: buttons)
-    let padding = 20.0
+    let padding = 5.0
     stack.axis = .vertical
     stack.alignment = .center
     stack.distribution = .fillEqually
     stack.spacing = 8
     view.addSubview(stack)
     stack.translatesAutoresizingMaskIntoConstraints = false
-    stack.topAnchor.constraint(equalTo: view.topAnchor, constant: 2 * padding).isActive = true
-    stack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -2 * padding).isActive = true
+    stack.topAnchor.constraint(equalTo: view.topAnchor, constant: 8 * padding).isActive = true
+    stack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8 * padding).isActive = true
     stack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding).isActive = true
     stack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding).isActive = true
     for i in buttons.indices {
       let button = buttons[i]
       button.translatesAutoresizingMaskIntoConstraints = false
-      button.widthAnchor.constraint(equalTo: stack.widthAnchor, multiplier: 1 - CGFloat(i) * 0.04).isActive = true
+      button.widthAnchor.constraint(equalTo: stack.widthAnchor, multiplier: 1 - CGFloat(i) * 0.035).isActive = true
     }
   }
 
