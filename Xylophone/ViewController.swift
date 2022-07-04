@@ -10,8 +10,15 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-  private var buttons: [UIButton] = []
-
+  let stack: UIStackView = {
+    $0.axis = .vertical
+    $0.alignment = .center
+    $0.distribution = .fillEqually
+    $0.spacing = 8
+    $0.translatesAutoresizingMaskIntoConstraints = false
+    return $0
+  }(UIStackView())
+  
   var player: AVAudioPlayer!
 
   func playSound(_ title: String) {
@@ -21,44 +28,35 @@ class ViewController: UIViewController {
   }
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupUI()
-  }
-  func setupUI() {
     view.backgroundColor = .white
-    setupKeys()
-    let stack = UIStackView(arrangedSubviews: buttons)
-    let padding = 5.0
-    stack.axis = .vertical
-    stack.alignment = .center
-    stack.distribution = .fillEqually
-    stack.spacing = 8
     view.addSubview(stack)
-    stack.translatesAutoresizingMaskIntoConstraints = false
-    stack.topAnchor.constraint(equalTo: view.topAnchor, constant: 10 * padding).isActive = true
-    stack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10 * padding).isActive = true
-    stack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding).isActive = true
-    stack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding).isActive = true
-    for i in buttons.indices {
-      let button = buttons[i]
-      button.translatesAutoresizingMaskIntoConstraints = false
-      button.widthAnchor.constraint(equalTo: stack.widthAnchor, multiplier: 1 - CGFloat(i) * 0.035).isActive = true
-    }
+    setupConstraints()
+    setupKeys()
   }
-
+  func setupConstraints() {
+    NSLayoutConstraint.activate([
+      stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+      stack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+      stack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      stack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+    ])
+  }
   func setupKeys() {
+    let width = UIScreen.main.bounds.width
     let labels = ["C", "D", "E", "F", "G", "A", "B"]
-    for i in 0..<7 {
+    for i in labels.indices {
       let button = UIButton()
+      let label = labels[i]
       button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
-      button.backgroundColor = UIColor.init(named: labels[i])
-      button.setTitle(labels[i], for: .normal)
+      button.backgroundColor = UIColor.init(named: label)
+      button.setTitle(label, for: .normal)
       button.addTarget(self, action: #selector(keyPressed), for: .touchUpInside)
       button.layer.cornerRadius = 10
-      buttons.append(button)
-      view.addSubview(button)
+      button.translatesAutoresizingMaskIntoConstraints = false
+      button.widthAnchor.constraint(equalToConstant: width * (1 - CGFloat(i + 3) * 0.035)).isActive = true
+      stack.addArrangedSubview(button)
     }
   }
-
   @objc func keyPressed(_ sender: UIButton) {
     if let title = sender.currentTitle { playSound(title)}
   }
