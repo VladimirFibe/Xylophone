@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025E8AD12A91B50A00876EF0 /* iPhone14Pro.png in Resources */ = {isa = PBXBuildFile; fileRef = 025E8AD02A91B50A00876EF0 /* iPhone14Pro.png */; };
 		1F6F8B8527A129370070F274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F8B8427A129370070F274 /* AppDelegate.swift */; };
 		1F6F8B8727A129370070F274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F8B8627A129370070F274 /* SceneDelegate.swift */; };
 		1F6F8B8927A129370070F274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F8B8827A129370070F274 /* ViewController.swift */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025E8ACE2A91B05900876EF0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		025E8AD02A91B50A00876EF0 /* iPhone14Pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone14Pro.png; sourceTree = "<group>"; };
 		1F6F8B8127A129370070F274 /* Xylophone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xylophone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6F8B8427A129370070F274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6F8B8627A129370070F274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,9 +52,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025E8ACF2A91B08700876EF0 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				025E8AD02A91B50A00876EF0 /* iPhone14Pro.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		1F6F8B7827A129370070F274 = {
 			isa = PBXGroup;
 			children = (
+				025E8ACE2A91B05900876EF0 /* README.md */,
+				025E8ACF2A91B08700876EF0 /* img */,
 				1F6F8B8327A129370070F274 /* Xylophone */,
 				1F6F8B8227A129370070F274 /* Products */,
 			);
@@ -158,6 +171,7 @@
 				1F6F8BA427A14FCA0070F274 /* C.wav in Resources */,
 				1F6F8B9F27A14FCA0070F274 /* D.wav in Resources */,
 				1F6F8B8E27A129370070F274 /* Assets.xcassets in Resources */,
+				025E8AD12A91B50A00876EF0 /* iPhone14Pro.png in Resources */,
 				1F6F8BA027A14FCA0070F274 /* A.wav in Resources */,
 				1F6F8BA327A14FCA0070F274 /* E.wav in Resources */,
 			);
@@ -312,20 +326,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Xylophone/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Xylophone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -340,20 +355,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Xylophone/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Xylophone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
